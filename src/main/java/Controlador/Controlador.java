@@ -38,7 +38,8 @@ public class Controlador {
          Profesor prof = profesor_db.getPersona(p);*/
          String  p = request.getParameter("nombre1");
         String q = request.getParameter("contrasenia ");
-        
+       
+        //este es un cambio en el codigo
        String info = "";
         
         /*if (p.equals("") && q.equals("")){
