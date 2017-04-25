@@ -26,7 +26,7 @@ public class Usuario  {
     @Id
     @Column(name="idusuario")
     private String idusuario;
-    
+    //hjshdfjksdh
    /* @Column(name="apm")
     private String apm;
     
