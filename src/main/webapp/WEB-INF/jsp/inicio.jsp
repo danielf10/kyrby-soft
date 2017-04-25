@@ -24,10 +24,10 @@
             <form  id="lol"  method="GET" action="clase1/usuario">
                  
                <h2>usuario</h2>
-                <input id="nombre2" name="nombre1" id="usuario" class="form-control"  type="text" placeholder="Nombre">
+               <input id="nombre2" name="nombre1" id="usuario" class="form-control"  type="text" placeholder="Nombre" required>
                 
                  <h2>contraseña</h2>
-                 <input id="contrasenia" id="contra" name="contrasenia" class="form-control" type="text" placeholder="contraseñia">
+                 <input id="contrasenia" id="contra" name="contrasenia" class="form-control" type="text" placeholder="contraseñia" required>
                 
                 
                 <br>

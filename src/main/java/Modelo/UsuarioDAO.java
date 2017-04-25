@@ -29,9 +29,9 @@ public class UsuarioDAO {
         Transaction tx = null;
         try {
            tx = session.beginTransaction();
-            String hql = " from usuario where idusuario=:usen";
+            String hql = " from Usuario where idusuario = :usen";
             Query query = session.createQuery(hql);
-            query.setParameter("nombre", usen);
+            query.setParameter("usen", usen);
             user = (Usuario)query.uniqueResult();
             tx.commit();
            

@@ -22,44 +22,43 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="usuario")
-public class Usuario {
-    @Column(name="nombre")
-    private String nombre;
+public class Usuario  {
+    @Id
+    @Column(name="idusuario")
+    private String idusuario;
     
-    @Column(name="apm")
+   /* @Column(name="apm")
     private String apm;
     
     @Column(name="app")
     private String app;
-    
-    @Column(name="fotos")
+    */
+    @Column(name="correo")
     private String correo;
     
     
     
     @Column(name="contrasenia")
     private String contrasenia;
-    
+    /*
     @Column(name="administrador")
     private String administrador;
     
     @Column(name="fechaNacimiento")
     private String fechaNacimiento;
+    */
     
     
-    
-    @Id@GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="usuario")
-    private int usuario;
+   
 
-    public String getNombre() {
-        return nombre;
+    public String getIdusuario() {
+        return idusuario;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setIdusuario(String nombre) {
+        this.idusuario = idusuario;
     }
-
+/*
     public String getApm() {
         return apm;
     }
@@ -75,7 +74,7 @@ public class Usuario {
     public void setApp(String app) {
         this.app = app;
     }
-
+*/
     public String getCorreo() {
         return correo;
     }
@@ -91,7 +90,7 @@ public class Usuario {
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }
-
+/*
     public String getAdministrador() {
         return administrador;
     }
@@ -115,5 +114,5 @@ public class Usuario {
     public void setUsuario(int usuario) {
         this.usuario = usuario;
     }
-    
+  */  
 }

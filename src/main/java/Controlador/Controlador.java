@@ -33,12 +33,21 @@ public class Controlador {
     //@RequestMapping(value="/profesor", method = RequestMethod.GET)
         @RequestMapping(value="clase1/usuario", method = RequestMethod.GET)
         
-    public ModelAndView usuario(ModelMap model,HttpServletRequest request){
+    public ModelAndView usuario(ModelMap model,HttpServletRequest request) {
         /*String p = request.getParameter("nombre1");
          Profesor prof = profesor_db.getPersona(p);*/
-         String  p = request.getParameter("nombre1");
-        String q = request.getParameter("contrasenia ");
-       
+        //String p="";
+        //String q="";
+        //try {
+          String p = request.getParameter("nombre1");
+          String q = request.getParameter("contrasenia ");
+        //}
+        //catch(Exception e) {
+          // String info = "";
+            //model.addAttribute("info", info+"no haz llenado ningun campo");
+            //return new ModelAndView("error", model);
+        //}
+        
         //este es un cambio en el codigo
        String info = "";
         
@@ -51,7 +60,7 @@ public class Controlador {
        
        // Usuario usuer = usuario_db.setCorreo(r);
        Usuario usuer = usuario_db.getUs(p);
-       usuer = usuario_db.getCont(q);
+      // Usuario usuer = usuario_db.getCont(q);
         
        
         
