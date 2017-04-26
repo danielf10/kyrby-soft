@@ -23,11 +23,14 @@
         <center>
             <form  id="lol"  method="GET" action="clase1/usuario">
                  
-               <h2>usuario</h2>
+               <h2>Usuario</h2>
                <input id="nombre2" name="nombre1" id="usuario" class="form-control"  type="text" placeholder="Nombre" required>
-                
-                 <h2>contraseña</h2>
-                 <input id="contrasenia" id="contra" name="contrasenia" class="form-control" type="text" placeholder="contraseñia" required>
+                    
+               <h2>Correo</h2>
+               <input id="correo" name="correo" id="correo" class="form-control"  type="text" placeholder="Correo" required>
+                 
+               <h2>Contraseña</h2>
+               <input id="contrasenia" id="contra" name="contrasenia" class="form-control" type="text" placeholder="contraseñia" required>
                 
                 
                 <br>
@@ -40,7 +43,8 @@
     <script>
         var usuario=document.getElementById('usuario');
         var contrasenia=document.getElementById('contra');
-        if(usuario=="" &&  contrasenia==""){
+        var correo=document.getElementById('correo');
+        if(usuario=="" &&  contrasenia==""&&  correo==""){
             function myFunction{
                 alert("campos vacios");
                 

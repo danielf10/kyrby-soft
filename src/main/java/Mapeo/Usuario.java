@@ -48,6 +48,9 @@ public class Usuario  {
     private String fechaNacimiento;
     */
     
+    public Usuario(){
+    }
+    
     
    
 
@@ -56,7 +59,7 @@ public class Usuario  {
     }
 
     public void setIdusuario(String nombre) {
-        this.idusuario = idusuario;
+        this.idusuario = nombre;
     }
 /*
     public String getApm() {

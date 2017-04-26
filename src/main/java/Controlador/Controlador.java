@@ -40,7 +40,8 @@ public class Controlador {
         //String q="";
         //try {
           String p = request.getParameter("nombre1");
-          String q = request.getParameter("contrasenia ");
+          String q = request.getParameter("contrasenia");
+          String r = request.getParameter("correo");
         //}
         //catch(Exception e) {
           // String info = "";
@@ -59,7 +60,7 @@ public class Controlador {
         else{*/
        
        // Usuario usuer = usuario_db.setCorreo(r);
-       Usuario usuer = usuario_db.getUs(p);
+       Usuario usuer = usuario_db.setUs(p,r,q);
       // Usuario usuer = usuario_db.getCont(q);
         
        
@@ -70,10 +71,10 @@ public class Controlador {
         
         
         if (usuer == null){
-            model.addAttribute("info", info+"No  es valido el usuario");
+            model.addAttribute("info", info+"No  insertado");
         }else{
             info="";
-            model.addAttribute("info", info+"bienbenido");
+            model.addAttribute("info", info+"insertado");
             //model.addAttribute("usuario", usuer);
         }
         return new ModelAndView("usuario",model);

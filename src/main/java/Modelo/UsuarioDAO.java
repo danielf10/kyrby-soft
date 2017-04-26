@@ -23,16 +23,17 @@ public class UsuarioDAO {
         this.sessionFactory = sessionFactory;
     }
     
-    public Usuario getUs(String usen) {
-        Usuario user = null;
+    public Usuario setUs(String usen, String correo, String contrasenia) {
+        Usuario user = new Usuario();
         Session session = sessionFactory.openSession();
         Transaction tx = null;
         try {
            tx = session.beginTransaction();
-            String hql = " from Usuario where idusuario = :usen";
-            Query query = session.createQuery(hql);
-            query.setParameter("usen", usen);
-            user = (Usuario)query.uniqueResult();
+            System.out.println(usen+ " "+correo+ " "+ contrasenia );
+           user.setIdusuario(usen);
+           user.setCorreo(correo);
+           user.setContrasenia(contrasenia);
+           session.save(user);
             tx.commit();
            
         }
